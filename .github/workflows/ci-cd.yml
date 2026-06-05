@@ -1,0 +1,35 @@
+# 1. THE NAME OF THIS WORKFLOW
+name: My Simple CI-CD Pipeline
+
+# 2. THE TRIGGERS: When should this assembly line run?
+on:
+  push:
+    branches: [ main ]      # Run whenever code is pushed or merged to the 'main' branch
+  pull_request:
+    branches: [ main ]      # Run whenever a Pull Request is opened against 'main'
+
+# 3. THE PIPELINE STATIONS (JOBS)
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest  # GitHub rents a fresh, temporary computer to run these steps
+
+    steps:
+      # Step 1: Copy the repository code onto this temporary computer
+      - name: Grab Code From Repo
+        uses: actions/checkout@v4
+
+      # Step 2: Simulate checking code for formatting/style errors
+      - name: Run Linter Station
+        run: echo "Checking code formatting style... All clean!"
+
+      # Step 3: Simulate running tests to ensure nothing is broken
+      - name: Run Testing Station
+        run: echo "Running automated tests... 100% passed!"
+
+      # Step 4: Simulate a build tool packing up the code
+      - name: Run Build Tool Station
+        run: echo "Compiling and packaging code into production files..."
+
+      # Step 5: Simulate deploying the finished product to the internet
+      - name: Run Deployment Station
+        run: echo "Deploying files to the cloud. App is now live! 🚀"
