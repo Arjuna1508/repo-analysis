@@ -75,3 +75,41 @@ export default defineConfig([
   },
 ])
 ```
+## Student Details
+
+**Name:** Mayank Kothari
+**Roll Number:** 251EE235
+
+## Repository Analysis
+
+### Framework Versions
+
+* React
+* React DOM
+* TypeScript
+* Vite
+* ESLint
+
+These versions were identified from the `package.json` file.
+
+### Workflow Analysis
+
+The workflow file is present in:
+
+`.github/workflows`
+
+The workflow is triggered on pushes and pull requests to the main branch.
+
+The workflow contains stages for:
+
+* Checkout
+* Linting
+* Testing
+* Build
+* Deployment
+
+These checks help ensure code quality before changes are merged into the main branch.
+
+### Changes Made
+
+Added student details and repository analysis as part of the DEV SMP Task 4 submission.
